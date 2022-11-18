@@ -1,0 +1,16 @@
+<div class="container">
+  <h1><%= @list.name%></h1>
+  <% @list.bookmarks.each do |bookmark| %>
+<div class="card-product">
+  <p><%= image_tag bookmark.movie.poster_url %></p>
+<div class="card-product-info">
+  <h2><strong><%= bookmark.movie.title %></strong></h4>
+  <p><strong><%= bookmark.movie.rating %></strong></p>
+  <p><strong><%= bookmark.movie.overview %></strong></p>
+  </div>
+</div>
+
+<%= link_to "delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+<% end %>
+<%= link_to "add a new bookmark", new_list_bookmark_path(@list)%>
+</div>

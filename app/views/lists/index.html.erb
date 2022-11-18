@@ -1,0 +1,30 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://sports.cbsimg.net/images/visual/whatshot/lebron_banner.jpg);">
+  <div class="container">
+    <h1>LeGoat HighLights <strong>Goat skills</strong> to <strong>goat people</strong>!</h1>
+    <p>Change your feur and learn to goat at one of our campuses around the goat.</p>
+  </div>
+</div>
+
+  <h3>Goat Highlights</h3>
+  <div class="cards">
+  <% @lists.each do |list| %>
+   <%= link_to list_path(list) do  %>
+    <div class="card-category">
+        <p><%=list.name %></p>
+    </div>
+    <% end %>
+  <% end %>
+    </div>
+
+
+
+<%#     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.parlons-basket.com/wp-content/uploads/2020/02/lebron-james-lakers-nba-3.jpg)">
+      Dunks
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://lebronwire.usatoday.com/wp-content/uploads/sites/37/2019/06/gettyimages-460165124.jpg?w=1000&h=600&crop=1)">
+      Celebrations
+    </div>
+  </div>
+ %>
